@@ -1,0 +1,17 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    username: root
+    password: crush
+    url: jdbc:mysql://localhost:3306/universal_tools?useSSL=true&useUnicode=true&characterEncoding=UTF-8&useTimezone=true&serverTimezone=GMT%2B8&allowMultiQueries=true&rewriteBatchedStatements=true
+    hikari:
+      auto-commit: false
+mybatis-plus:
+  configuration:
+    cache-enabled: true
+    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
+    default-executor-type: simple
+  type-aliases-package: indi.ly.crush.model
+  mapper-locations: classpath*:indi/ly/crush/repository/**/*.xml
